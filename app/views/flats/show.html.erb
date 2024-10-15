@@ -1,0 +1,58 @@
+<div class="row">
+  <div class="col-8">
+    <div class="card my-3">
+      <div class="card-header">
+        <h1><%= @flat.name %></h1>
+        <h5><%= @flat.address %></h5>
+      </div>
+    </div>
+
+    <div class="card my-3">
+      <div class="card-header">
+        <h3>A bit more about this flat...</h3>
+        <p><%= @flat.description %></p>
+      </div>
+    </div>
+
+    <div class="card my-3">
+      <div class="card-header">
+        <h3>Details</h3>
+        <div class="d-flex">
+          <div class="pr-1"><i class="fa-solid fa-user-group"></i>  <%= @flat.number_of_guests %></div>
+          <div class="px-2"><i class="fa-solid fa-euro-sign"></i>  <%= @flat.price_per_night %></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-4">
+    <div class="card my-3">
+      <div class="card-header">
+      <h5>Book this place!</h5>
+
+      <div class="input-group mb-3">
+        <span class="input-group-text" id="inputGroup-sizing-default">From: </span>
+        <input placeholder="12/10/2017"type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+      </div>
+
+      <div class="input-group mb-3">
+        <span class="input-group-text" id="inputGroup-sizing-default">To: </span>
+        <input placeholder="18/10/2017"type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+      </div>
+
+      <%= link_to "Book", "", class:"btn btn-success", id:"btn-book" %>
+      </div>
+    </div>
+
+    <div class="card my-3">
+      <div class="card-header d-flex justify-content-between">
+        <div>Share</div>
+        <div>
+          <i class="fa-brands fa-square-facebook"></i>
+          <i class="fa-brands fa-square-instagram"></i>          <i class="fa-brands fa-square-pinterest"></i>
+          <i class="fa-solid fa-square-envelope"></i>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

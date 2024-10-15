@@ -1,0 +1,23 @@
+<h1>All our Flats (<%= @flats.length %>)</h1>
+
+<div class="row">
+  <% @flats.each do |flat| %>
+    <div class="col-4">
+      <div class="card-index mb-3">
+        <div class="card-header">
+          <h5><%= flat.name %></h5>
+          <p><%= flat.address %></p>
+          <div class="d-flex">
+            <div class="pr-1"><i class="fa-solid fa-user-group"></i>  <%= flat.number_of_guests %></div>
+            <div class="px-2"><i class="fa-solid fa-euro-sign"></i>  <%= flat.price_per_night %></div>
+          </div>
+        </div>
+        <div class="card-body">
+          <%= link_to "More info", flat_path(flat), class: "btn btn-outline-primary" %>
+          <%= link_to "Edit", edit_flat_path(flat), class: "btn btn-outline-warning" %>
+          <%= link_to "Remove", "", class: "btn btn-outline-danger" %>
+        </div>
+      </div>
+    </div>
+  <% end %>
+</div>
